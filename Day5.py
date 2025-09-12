@@ -13,7 +13,7 @@ if category == "Currency":
     rates = {"USD": 1, "INR": 83, "EUR": 0.93}
     result = value / rates[from_currency] * rates[to_currency]
     st.metric(label=f"{from_currency} → {to_currency}", value=f"{result:.2f} {to_currency}")
-#Testing branch
+#Testing branch for 2 branches
 elif category == "Temperature":
     from_temp = st.selectbox("From", ["Celsius", "Fahrenheit", "Kelvin"])
     to_temp = st.selectbox("To", ["Celsius", "Fahrenheit", "Kelvin"])
@@ -46,3 +46,4 @@ elif category == "Weight":
     result = value * factors[from_wt] / factors[to_wt]
 
     st.metric(label=f"{from_wt} → {to_wt}", value=f"{result:.2f} {to_wt}")
+
